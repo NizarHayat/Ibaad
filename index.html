@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibaad Contracting Inc — Licensed Home Improvement Contractor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="progress"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-i">
+            <a href="#" class="logo">
+                <span class="lt">Ibaad <b>Contracting Inc</b></span>
+            </a>
+            <div class="nav-links">
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Reviews</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="nav-r">
+                <a href="tel:9179634292" class="nav-tel">917 · 963 · 4292</a>
+                <a href="tel:9179634292" class="btn btn-p" style="padding:10px 22px;font-size:12px;">Free Estimate <span class="arr"></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-slide hs1 active"></div>
+        <div class="hero-slide hs2"></div>
+        <div class="hero-slide hs3"></div>
+        <div class="hero-slide hs4"></div>
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-noise"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-glow-b"></div>
+        <div class="hero-glow-g"></div>
+
+        <div class="hero-coord">40°42′N · 74°00′W · New York City</div>
+
+        <div class="hero-body">
+            <div class="hero-kicker" style="animation:fadeUp .8s ease .5s both">
+                <div class="kicker-line"></div>
+                <span class="eyebrow">Licensed &amp; Insured · Residential &amp; Commercial</span>
+            </div>
+            <h1 class="hero-h">
+                <span class="l1">Home</span>
+                <span class="l2"><em>Improvement</em></span>
+                <span class="l3">Experts<span style="color:var(--gv)">.</span></span>
+            </h1>
+
+            <div class="hero-foot">
+                <div class="hf-block">
+                    <div class="hf-val" id="c1">12<span>+</span></div>
+                    <div class="hf-lbl">Services Offered</div>
+                    <div class="hf-desc">From roofing to window glass replacement</div>
+                </div>
+                <div class="hf-block">
+                    <div class="hf-val" id="c2">100<span>%</span></div>
+                    <div class="hf-lbl">Licensed &amp; Insured</div>
+                    <div class="hf-desc">Fully certified for your peace of mind</div>
+                </div>
+                <div class="hf-block hf-actions">
+                    <a href="tel:9179634292" class="btn btn-p" style="font-size:13px;padding:14px 30px;width:fit-content">Call 917-963-4292 <span class="arr"></span></a>
+                    <a href="#" class="btn btn-ghost" style="font-size:13px;padding:14px 30px;width:fit-content">Our Services</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-ind">
+            <div class="scroll-line-v"></div>
+            <span class="scroll-lbl">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="t-track">
+            <div class="t-item"><span class="td"></span>Siding</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Licensed &amp; Insured</span></div>
+            <div class="t-item"><span class="td"></span>Pavers</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Free Estimates</span></div>
+            <div class="t-item"><span class="td"></span>Roofing</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Residential &amp; Commercial</span></div>
+            <div class="t-item"><span class="td"></span>Painting</div>
+            <div class="t-item"><span class="td"></span><span class="tg">917-963-4292</span></div>
+            <div class="t-item"><span class="td"></span>Masonry</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Brick Repointing</span></div>
+            <div class="t-item"><span class="td"></span>Sidewalk</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Powerwashing</span></div>
+            <div class="t-item"><span class="td"></span>Waterproofing</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Brick Replacement</span></div>
+            <div class="t-item"><span class="td"></span>Concrete Replacement</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Window Glass Replacement</span></div>
+            <!-- duplicate for seamless loop -->
+            <div class="t-item"><span class="td"></span>Siding</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Licensed &amp; Insured</span></div>
+            <div class="t-item"><span class="td"></span>Pavers</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Free Estimates</span></div>
+            <div class="t-item"><span class="td"></span>Roofing</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Residential &amp; Commercial</span></div>
+            <div class="t-item"><span class="td"></span>Painting</div>
+            <div class="t-item"><span class="td"></span><span class="tg">917-963-4292</span></div>
+            <div class="t-item"><span class="td"></span>Masonry</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Brick Repointing</span></div>
+            <div class="t-item"><span class="td"></span>Sidewalk</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Powerwashing</span></div>
+            <div class="t-item"><span class="td"></span>Waterproofing</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Brick Replacement</span></div>
+            <div class="t-item"><span class="td"></span>Concrete Replacement</div>
+            <div class="t-item"><span class="td"></span><span class="tg">Window Glass Replacement</span></div>
+        </div>
+    </div>
+
+    <!-- TRUST METRICS -->
+    <section class="trust">
+        <div class="trust-in">
+            <div class="trust-top reveal">
+                <h2>New York's trusted<br>home improvement<br>&amp; contracting experts</h2>
+                <p>From a single brick repoint to a full roof replacement, Ibaad Contracting Inc delivers quality craftsmanship, honest pricing, and lasting results. We are fully licensed and insured, serving residential and commercial clients across the New York metro area with pride and professionalism.</p>
+            </div>
+            <div class="met-grid">
+                <div class="mc reveal">
+                    <div class="mc-bar"></div>
+                    <div class="mc-num">12<sup>+</sup></div>
+                    <div class="mc-unit">Services Offered</div>
+                    <div class="mc-desc">Roofing, siding, masonry, pavers, painting, and much more.</div>
+                    <div class="mc-bg">01</div>
+                </div>
+                <div class="mc reveal">
+                    <div class="mc-bar"></div>
+                    <div class="mc-num">100<sup>%</sup></div>
+                    <div class="mc-unit">Licensed &amp; Insured</div>
+                    <div class="mc-desc">Fully certified contractor. Your property is always protected.</div>
+                    <div class="mc-bg">02</div>
+                </div>
+                <div class="mc reveal">
+                    <div class="mc-bar"></div>
+                    <div class="mc-num">Free<sup></sup></div>
+                    <div class="mc-unit">Estimates</div>
+                    <div class="mc-desc">No-obligation free estimates for every project, big or small.</div>
+                    <div class="mc-bg">03</div>
+                </div>
+                <div class="mc reveal">
+                    <div class="mc-bar"></div>
+                    <div class="mc-num">NYC<sup></sup></div>
+                    <div class="mc-unit">Based &amp; Serving</div>
+                    <div class="mc-desc">Serving the entire New York City metro area and surrounding regions.</div>
+                    <div class="mc-bg">04</div>
+                </div>
+            </div>
+            <div class="certs reveal">
+                <div class="cert">
+                    <div class="cert-ico"><svg viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                    <div><div class="cert-n">Licensed Contractor</div><div class="cert-s">State of New York</div></div>
+                </div>
+                <div class="cert">
+                    <div class="cert-ico"><svg viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                    <div><div class="cert-n">Fully Insured</div><div class="cert-s">Liability &amp; Workers Comp</div></div>
+                </div>
+                <div class="cert">
+                    <div class="cert-ico"><svg viewBox="0 0 24 24"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg></div>
+                    <div><div class="cert-n">Free Estimates</div><div class="cert-s">No Obligation · Call Today</div></div>
+                </div>
+                <div class="cert">
+                    <div class="cert-ico"><svg viewBox="0 0 24 24"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
+                    <div><div class="cert-n">Residential &amp; Commercial</div><div class="cert-s">All Property Types</div></div>
+                </div>
+                <div class="cert">
+                    <div class="cert-ico"><svg viewBox="0 0 24 24"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
+                    <div><div class="cert-n">Call 917-963-4292</div><div class="cert-s">ibaadcontractingcorp@gmail.com</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!--Services-->
+    <!-- <section class="services" id="services">
+        <div class="svc-in">
+            <div class="svc-top reveal">
+                <div>
+                    <div class="eyebrow" style="margin-bottom:14px">What We Do</div>
+                    <h2>Complete Home<br>Improvement<br><em>Services</em></h2>
+                </div>
+                <p style="font-size:14px;color:var(--wm);line-height:1.85;">From your roof to your sidewalk, Ibaad Contracting Inc handles every aspect of your property. We bring craftsmanship, quality materials, and professional service to every job — no matter the size.</p>
+            </div>
+            <div class="svc-grid">
+                <div class="svc-card reveal">
+                    <div class="svc-no">01</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></div>
+                    <h3>Roofing</h3>
+                    <p>Full roof installations, repairs, and replacements using high-quality materials built to last through every season.</p>
+                    <div class="svc-tags"><span class="svc-tag">Residential</span><span class="svc-tag">Commercial</span><span class="svc-tag">Repairs</span></div>
+                    <div class="svc-bg">01</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">02</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15"/></svg></div>
+                    <h3>Siding</h3>
+                    <p>Protect and beautify your home with professional siding installation and repair in a wide range of materials and finishes.</p>
+                    <div class="svc-tags"><span class="svc-tag">Vinyl</span><span class="svc-tag">Fiber Cement</span><span class="svc-tag">Wood</span></div>
+                    <div class="svc-bg">02</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">03</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg></div>
+                    <h3>Masonry &amp; Brickwork</h3>
+                    <p>Expert brick repointing, brick replacement, and full masonry work to restore and strengthen your property's structure.</p>
+                    <div class="svc-tags"><span class="svc-tag">Brick Repointing</span><span class="svc-tag">Brick Replacement</span></div>
+                    <div class="svc-bg">03</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">04</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
+                    <h3>Painting</h3>
+                    <p>Interior and exterior painting services that refresh and protect your property with premium paints and flawless finishes.</p>
+                    <div class="svc-tags"><span class="svc-tag">Interior</span><span class="svc-tag">Exterior</span><span class="svc-tag">Commercial</span></div>
+                    <div class="svc-bg">04</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">05</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636"/></svg></div>
+                    <h3>Powerwashing</h3>
+                    <p>High-pressure powerwashing to deep-clean driveways, sidewalks, decks, siding, and building exteriors.</p>
+                    <div class="svc-tags"><span class="svc-tag">Driveways</span><span class="svc-tag">Sidewalks</span><span class="svc-tag">Exteriors</span></div>
+                    <div class="svc-bg">05</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">06</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M5.636 5.636a9 9 0 1012.728 12.728M5.636 5.636a9 9 0 0112.728 12.728M5.636 5.636L12 12m6.364 6.364L12 12"/></svg></div>
+                    <h3>Waterproofing</h3>
+                    <p>Protect your basement, foundation, and walls from water intrusion with professional waterproofing solutions.</p>
+                    <div class="svc-tags"><span class="svc-tag">Basement</span><span class="svc-tag">Foundation</span><span class="svc-tag">Walls</span></div>
+                    <div class="svc-bg">06</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">07</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div>
+                    <h3>Pavers</h3>
+                    <p>Custom paver installation for driveways, patios, walkways, and pool areas that add beauty and lasting value.</p>
+                    <div class="svc-tags"><span class="svc-tag">Driveways</span><span class="svc-tag">Patios</span><span class="svc-tag">Walkways</span></div>
+                    <div class="svc-bg">07</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">08</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
+                    <h3>Sidewalk &amp; Concrete</h3>
+                    <p>Sidewalk repair, replacement, and new concrete work including driveways and concrete slabs done to DOT standards.</p>
+                    <div class="svc-tags"><span class="svc-tag">Sidewalk Repair</span><span class="svc-tag">Concrete Replace</span></div>
+                    <div class="svc-bg">08</div>
+                </div>
+                <div class="svc-card reveal">
+                    <div class="svc-no">09</div>
+                    <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg></div>
+                    <h3>Window Glass Replacement</h3>
+                    <p>Fast, professional window glass replacement for broken, cracked, or fogged glass in homes and businesses.</p>
+                    <div class="svc-tags"><span class="svc-tag">Residential</span><span class="svc-tag">Commercial</span><span class="svc-tag">Same Day</span></div>
+                    <div class="svc-bg">09</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="services" id="services">
+  <div class="svc-in">
+
+    <div class="svc-top">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px">What We Do</div>
+        <h2>Complete Home<br>Improvement<br><em>Services</em></h2>
+      </div>
+      <p style="font-size:14px;color:var(--wm);line-height:1.85;">From your roof to your sidewalk, Ibaad Contracting Inc handles every aspect of your property. We bring craftsmanship, quality materials, and professional service to every job — no matter the size.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- 01 Roofing -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">01</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></div>
+          <h3>Roofing</h3>
+          <p>Full roof installations, repairs, and replacements using high-quality materials built to last through every season.</p>
+          <div class="svc-tags"><span class="svc-tag">Residential</span><span class="svc-tag">Commercial</span><span class="svc-tag">Repairs</span></div>
+        </div>
+        <div class="svc-bg">01</div>
+      </div>
+
+      <!-- 02 Siding -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">02</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15"/></svg></div>
+          <h3>Siding</h3>
+          <p>Protect and beautify your home with professional siding installation and repair in a wide range of materials and finishes.</p>
+          <div class="svc-tags"><span class="svc-tag">Vinyl</span><span class="svc-tag">Fiber Cement</span><span class="svc-tag">Wood</span></div>
+        </div>
+        <div class="svc-bg">02</div>
+      </div>
+
+      <!-- 03 Masonry -->
+      <div class="svc-card">
+        <div class="svc-photo" ></div>
+        <div class="svc-content">
+          <div class="svc-no">03</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg></div>
+          <h3>Masonry &amp; Brickwork</h3>
+          <p>Expert brick repointing, brick replacement, and full masonry work to restore and strengthen your property's structure.</p>
+          <div class="svc-tags"><span class="svc-tag">Brick Repointing</span><span class="svc-tag">Brick Replacement</span></div>
+        </div>
+        <div class="svc-bg">03</div>
+      </div>
+
+      <!-- 04 Painting -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">04</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
+          <h3>Painting</h3>
+          <p>Interior and exterior painting services that refresh and protect your property with premium paints and flawless finishes.</p>
+          <div class="svc-tags"><span class="svc-tag">Interior</span><span class="svc-tag">Exterior</span><span class="svc-tag">Commercial</span></div>
+        </div>
+        <div class="svc-bg">04</div>
+      </div>
+
+      <!-- 05 Powerwashing -->
+      <div class="svc-card">
+        <div class="svc-photo"  ></div>
+        <div class="svc-content">
+          <div class="svc-no">05</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636"/></svg></div>
+          <h3>Powerwashing</h3>
+          <p>High-pressure powerwashing to deep-clean driveways, sidewalks, decks, siding, and building exteriors.</p>
+          <div class="svc-tags"><span class="svc-tag">Driveways</span><span class="svc-tag">Sidewalks</span><span class="svc-tag">Exteriors</span></div>
+        </div>
+        <div class="svc-bg">05</div>
+      </div>
+
+      <!-- 06 Waterproofing -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/2850347/pexels-photo-2850347.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">06</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M5.636 5.636a9 9 0 1012.728 12.728M5.636 5.636a9 9 0 0112.728 12.728M5.636 5.636L12 12m6.364 6.364L12 12"/></svg></div>
+          <h3>Waterproofing</h3>
+          <p>Protect your basement, foundation, and walls from water intrusion with professional waterproofing solutions.</p>
+          <div class="svc-tags"><span class="svc-tag">Basement</span><span class="svc-tag">Foundation</span><span class="svc-tag">Walls</span></div>
+        </div>
+        <div class="svc-bg">06</div>
+      </div>
+
+      <!-- 07 Pavers -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">07</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div>
+          <h3>Pavers</h3>
+          <p>Custom paver installation for driveways, patios, walkways, and pool areas that add beauty and lasting value.</p>
+          <div class="svc-tags"><span class="svc-tag">Driveways</span><span class="svc-tag">Patios</span><span class="svc-tag">Walkways</span></div>
+        </div>
+        <div class="svc-bg">07</div>
+      </div>
+
+      <!-- 08 Sidewalk & Concrete -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">08</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
+          <h3>Sidewalk &amp; Concrete</h3>
+          <p>Sidewalk repair, replacement, and new concrete work including driveways and concrete slabs done to DOT standards.</p>
+          <div class="svc-tags"><span class="svc-tag">Sidewalk Repair</span><span class="svc-tag">Concrete Replace</span></div>
+        </div>
+        <div class="svc-bg">08</div>
+      </div>
+
+      <!-- 09 Window Glass -->
+      <div class="svc-card">
+        <div class="svc-photo" style="background-image:url('https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=900')"></div>
+        <div class="svc-content">
+          <div class="svc-no">09</div>
+          <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg></div>
+          <h3>Window Glass Replacement</h3>
+          <p>Fast, professional window glass replacement for broken, cracked, or fogged glass in homes and businesses.</p>
+          <div class="svc-tags"><span class="svc-tag">Residential</span><span class="svc-tag">Commercial</span><span class="svc-tag">Same Day</span></div>
+        </div>
+        <div class="svc-bg">09</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- PROCESS TIMELINE -->
+    <section class="process">
+        <div class="proc-in">
+            <div class="proc-hdr reveal">
+                <div>
+                    <div class="eyebrow" style="margin-bottom:12px">How We Work</div>
+                    <h2>Our <em>Process</em></h2>
+                </div>
+                <p>A simple, transparent process designed to make your home improvement project stress-free from start to finish.</p>
+            </div>
+            <div class="proc-track">
+                <div class="proc-line"></div>
+                <div class="proc-line-active" id="procLine"></div>
+                <div class="proc-step done reveal">
+                    <div class="proc-node"><svg viewBox="0 0 24 24"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
+                    <div class="proc-n">01 / Contact</div>
+                    <div class="proc-t">Call or Email Us</div>
+                    <div class="proc-d">Reach us at 917-963-4292 or email ibaadcontractingcorp@gmail.com to discuss your project.</div>
+                </div>
+                <div class="proc-step done reveal">
+                    <div class="proc-node"><svg viewBox="0 0 24 24"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></div>
+                    <div class="proc-n">02 / Estimate</div>
+                    <div class="proc-t">Free Site Visit</div>
+                    <div class="proc-d">We visit your property, assess the scope of work, and provide a detailed free estimate — no obligation.</div>
+                </div>
+                <div class="proc-step active reveal">
+                    <div class="proc-node"><svg viewBox="0 0 24 24"><path d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg></div>
+                    <div class="proc-n">03 / Proposal</div>
+                    <div class="proc-t">Review &amp; Approve</div>
+                    <div class="proc-d">We present a clear, itemized proposal. Once approved, we schedule your project promptly.</div>
+                </div>
+                <div class="proc-step reveal">
+                    <div class="proc-node"><svg viewBox="0 0 24 24"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75"/></svg></div>
+                    <div class="proc-n">04 / Build</div>
+                    <div class="proc-t">Work Begins</div>
+                    <div class="proc-d">Our skilled crew gets to work using quality materials, keeping your property clean and safe throughout.</div>
+                </div>
+                <div class="proc-step reveal">
+                    <div class="proc-node"><svg viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                    <div class="proc-n">05 / Complete</div>
+                    <div class="proc-t">Final Walkthrough</div>
+                    <div class="proc-d">We do a final walkthrough with you to ensure everything meets your expectations before we call it done.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES / SERVICE TYPES
+    <section class="industries">
+        <div class="ind-in">
+            <div class="ind-hdr reveal">
+                <div class="eyebrow" style="margin-bottom:12px">All Services</div>
+                <h2>Everything <em>We Offer</em></h2>
+            </div>
+            <div class="ind-grid">
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></div>
+                    <div class="ind-n">Roofing</div>
+                    <div class="ind-p">Install &amp; Repair</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18"/></svg></div>
+                    <div class="ind-n">Siding</div>
+                    <div class="ind-p">All Materials</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg></div>
+                    <div class="ind-n">Masonry</div>
+                    <div class="ind-p">Brick &amp; Stone</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
+                    <div class="ind-n">Painting</div>
+                    <div class="ind-p">Int. &amp; Ext.</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div>
+                    <div class="ind-n">Pavers</div>
+                    <div class="ind-p">Driveways &amp; Patios</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 21h16.5m-15-3h13.5M5.25 21V6.75m13.5 14.25V6.75m-9 0v-3h4.5v3m-6.75 0h9"/></svg></div>
+                    <div class="ind-n">Sidewalk</div>
+                    <div class="ind-p">DOT Compliant</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636"/></svg></div>
+                    <div class="ind-n">Powerwashing</div>
+                    <div class="ind-p">Deep Clean</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.636 5.636a9 9 0 1012.728 12.728M5.636 5.636a9 9 0 0112.728 12.728M5.636 5.636L12 12m6.364 6.364L12 12"/></svg></div>
+                    <div class="ind-n">Waterproofing</div>
+                    <div class="ind-p">Basement &amp; Foundation</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15"/></svg></div>
+                    <div class="ind-n">Brick Repointing</div>
+                    <div class="ind-p">Restore Mortar</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 01-.75.75h-.75m0-1.5h.375a.375.375 0 01.375.375v.375a.375.375 0 01-.375.375H20.25a.375.375 0 01-.375-.375v-.375a.375.375 0 01.375-.375zm-13.5 0h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18zm3-6h.008v.008H9.75V12zm0 3h.008v.008H9.75V15zm0 3h.008v.008H9.75V18zm3-6h.008v.008H12.75V12zm0 3h.008v.008H12.75V15zm0 3h.008v.008H12.75V18z"/></svg></div>
+                    <div class="ind-n">Brick Replacement</div>
+                    <div class="ind-p">Full Replacement</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
+                    <div class="ind-n">Concrete Replace</div>
+                    <div class="ind-p">Slabs &amp; Driveways</div>
+                </div>
+                <div class="ind-card reveal">
+                    <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg></div>
+                    <div class="ind-n">Window Glass</div>
+                    <div class="ind-p">Fast Replacement</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="test-in">
+            <div class="test-hdr reveal">
+                <div class="eyebrow" style="margin-bottom:12px;display:inline-block">Client Voices</div>
+                <h2>What Clients <em>Say</em></h2>
+            </div>
+            <div class="test-featured reveal">
+                <div class="quot-mark">"</div>
+                <blockquote class="test-quote">Ibaad Contracting replaced our entire roof and did brick repointing on the front of our house. The crew was professional, cleaned up every day, and finished ahead of schedule. Incredible work — I highly recommend them.</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar">MR</div>
+                    <div>
+                        <div class="test-name">Maria Rodriguez</div>
+                        <div class="test-role">Homeowner · Brooklyn, NY</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-grid">
+                <div class="test-card reveal">
+                    <div class="tc-q">They powerwashed our entire building exterior and it looks brand new. Fast, affordable, and professional. Will definitely call them again.</div>
+                    <div class="tc-auth">
+                        <div class="tc-av">JL</div>
+                        <div><div class="tc-n">James Lee</div><div class="tc-r">Property Manager · Queens, NY</div></div>
+                    </div>
+                </div>
+                <div class="test-card reveal">
+                    <div class="tc-q">Ibaad fixed our sidewalk violation quickly and at a great price. They handled everything from start to finish including the DOT inspection. Very smooth process.</div>
+                    <div class="tc-auth">
+                        <div class="tc-av">SK</div>
+                        <div><div class="tc-n">Sandra Kim</div><div class="tc-r">Homeowner · Bronx, NY</div></div>
+                    </div>
+                </div>
+                <div class="test-card reveal">
+                    <div class="tc-q">Had all our window glass replaced after a storm. They came out the same day, gave a fair estimate, and finished the job in a few hours. Outstanding service.</div>
+                    <div class="tc-auth">
+                        <div class="tc-av">DP</div>
+                        <div><div class="tc-n">David Park</div><div class="tc-r">Business Owner · Manhattan, NY</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-grid"></div>
+        <div class="cta-corner cta-tl"></div>
+        <div class="cta-corner cta-tr"></div>
+        <div class="cta-corner cta-bl"></div>
+        <div class="cta-corner cta-br"></div>
+        <div class="cta-in reveal">
+            <div class="eyebrow" style="display:inline-block;margin-bottom:22px">Free Estimates</div>
+            <h2>Ready to<br>Improve Your<br><em>Property?</em></h2>
+            <p>Whether it's a roof repair, new siding, brick repointing, or anything in between — Ibaad Contracting Inc delivers quality work at honest prices. Call us today for your free estimate.</p>
+            <div class="cta-acts">
+                <a href="tel:9179634292" class="btn btn-p" style="padding:18px 40px;font-size:14px">Call 917-963-4292 <span class="arr"></span></a>
+                <a href="mailto:ibaadcontractingcorp@gmail.com" class="btn btn-ghost" style="padding:18px 40px;font-size:14px">Email Us</a>
+            </div>
+            <div class="cta-contacts">
+                <div><div class="cc-lbl">Phone</div><div class="cc-val">917-963-4292</div></div>
+                <div><div class="cc-lbl">Email</div><div class="cc-val">ibaadcontractingcorp@gmail.com</div></div>
+                <div><div class="cc-lbl">Service Area</div><div class="cc-val">New York City &amp; Metro</div></div>
+                <div><div class="cc-lbl">Estimates</div><div class="cc-val">Always Free</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot-in">
+            <div class="foot-top">
+                <div class="foot-brand">
+                    <div class="logo"><span class="lt">Ibaad <b>Contracting Inc</b></span></div>
+                    <p>Licensed &amp; insured residential and commercial home improvement contractor serving New York City and surrounding areas.</p>
+                </div>
+                <div class="foot-links">
+                    <div class="fcol">
+                        <h5>Services</h5>
+                        <a href="#">Roofing</a><a href="#">Siding</a><a href="#">Masonry</a><a href="#">Pavers</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>More Services</h5>
+                        <a href="#">Painting</a><a href="#">Powerwashing</a><a href="#">Waterproofing</a><a href="#">Sidewalk</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Specialty</h5>
+                        <a href="#">Brick Repointing</a><a href="#">Brick Replacement</a><a href="#">Concrete</a><a href="#">Window Glass</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Contact</h5>
+                        <a href="tel:9179634292">917-963-4292</a>
+                        <a href="mailto:ibaadcontractingcorp@gmail.com">Email Us</a>
+                        <a href="#">Free Estimate</a>
+                        <a href="#">NYC &amp; Metro Area</a>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bot">
+                <span class="foot-copy">© 2025 Ibaad Contracting Inc. All rights reserved. Licensed &amp; Insured.</span>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:ibaadcontractingcorp@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script src="js/main2.js"></script>
+</body>
+</html>
