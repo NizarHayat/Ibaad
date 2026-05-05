@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Ibaad Contracting Inc</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Reuse styles -->
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<style>
+    /* PROJECTS */
+.projects-grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:24px;
+}
+
+.project-card{
+    background:#111;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project-img{
+    height:220px;
+    background-size:cover;
+    background-position:center;
+}
+
+.project-body{
+    padding:20px;
+}
+
+.project-tag{
+    font-size:12px;
+    opacity:.6;
+}
+
+.project-meta{
+    font-size:12px;
+    display:flex;
+    gap:15px;
+    margin:10px 0;
+    opacity:.7;
+}
+
+.project-btn{
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.project-details{
+    display:none;
+    margin-top:10px;
+    font-size:13px;
+    opacity:.8;
+}
+
+.project-details.show{
+    display:block;
+}
+</style>
+<body>
+
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-i">
+        <a href="index.html" class="logo">
+            <span class="lt">Ibaad <b>Contracting Inc</b></span>
+        </a>
+
+        <div class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-r">
+            <a href="tel:9299449040" class="nav-tel">929 · 944 · 9040</a>
+            <a href="contact.html" class="btn btn-p">Free Estimate</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div class="page-hero-in">
+        <div>
+            <div class="ph-kicker">
+                <div class="ph-kicker-line"></div>
+                <span class="eyebrow">Our Work</span>
+            </div>
+            <h1>Real<br><em>Projects.</em></h1>
+        </div>
+
+        <div class="ph-right">
+            <p>Explore our recent projects across New York City. From roofing and masonry to full exterior transformations — built with precision and delivered with quality.</p>
+
+            <div class="ph-stats">
+                <div>
+                    <div class="ph-stat-n">100+</div>
+                    <div class="ph-stat-l">Projects</div>
+                </div>
+                <div>
+                    <div class="ph-stat-n">NYC</div>
+                    <div class="ph-stat-l">Based</div>
+                </div>
+                <div>
+                    <div class="ph-stat-n">5★</div>
+                    <div class="ph-stat-l">Results</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+    <div class="filter-in">
+        <span class="filter-lbl">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="roofing">Roofing</button>
+        <button class="filter-btn" data-filter="masonry">Masonry</button>
+        <button class="filter-btn" data-filter="concrete">Concrete</button>
+        <button class="filter-btn" data-filter="painting">Painting</button>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="svc-section">
+    <div class="svc-in">
+
+        <div class="projects-grid">
+
+            <!-- PROJECT -->
+            <div class="project-card" data-category="roofing">
+                <div class="project-img" style="background-image:url('https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg')"></div>
+
+                <div class="project-body">
+                    <span class="project-tag">Roofing</span>
+                    <h3>Full Roof Replacement</h3>
+
+                    <div class="project-meta">
+                        <span>Location: Brooklyn</span>
+                        <span>Duration: 2 Days</span>
+                    </div>
+
+                    <p>Complete tear-off and installation of a new asphalt shingle roofing system with improved insulation and weather protection.</p>
+
+                    <div class="project-actions">
+                        <button class="project-btn" onclick="toggleDetails(this)">View Details</button>
+                    </div>
+
+                    <div class="project-details">
+                        <ul>
+                            <li>Removed old damaged roofing</li>
+                            <li>Installed waterproof underlayment</li>
+                            <li>Premium shingle system</li>
+                            <li>Final inspection & cleanup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="project-card" data-category="masonry">
+                <div class="project-img" style="background-image:url('https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg')"></div>
+
+                <div class="project-body">
+                    <span class="project-tag">Masonry</span>
+                    <h3>Brick Repointing</h3>
+
+                    <div class="project-meta">
+                        <span>Location: Queens</span>
+                        <span>Duration: 3 Days</span>
+                    </div>
+
+                    <p>Restored aging brick facade with full mortar repointing to prevent water damage and structural wear.</p>
+
+                    <div class="project-actions">
+                        <button class="project-btn" onclick="toggleDetails(this)">View Details</button>
+                    </div>
+
+                    <div class="project-details">
+                        <ul>
+                            <li>Removed deteriorated mortar</li>
+                            <li>Color-matched new mortar</li>
+                            <li>Sealed joints for durability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="project-card" data-category="concrete">
+                <div class="project-img" style="background-image:url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg')"></div>
+
+                <div class="project-body">
+                    <span class="project-tag">Concrete</span>
+                    <h3>Paver Driveway Installation</h3>
+
+                    <div class="project-meta">
+                        <span>Location: Bronx</span>
+                        <span>Duration: 4 Days</span>
+                    </div>
+
+                    <p>Custom-designed driveway using interlocking pavers for durability and modern aesthetics.</p>
+
+                    <div class="project-actions">
+                        <button class="project-btn" onclick="toggleDetails(this)">View Details</button>
+                    </div>
+
+                    <div class="project-details">
+                        <ul>
+                            <li>Excavation and base prep</li>
+                            <li>Paver layout design</li>
+                            <li>Joint sand finishing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+    <div class="cta-strip-in">
+        <div>
+            <div class="eyebrow">Start Your Project</div>
+            <h2>Let’s Build<br><em>Something Real</em></h2>
+            <p>Contact us today for a free estimate and project consultation.</p>
+        </div>
+
+        <div class="cta-strip-acts">
+            <a href="contact.html" class="btn btn-p">Get Free Estimate</a>
+            <a href="tel:9299449040" class="btn btn-ghost">Call Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="foot-in">
+        <div class="foot-bot">
+            <span>© 2025 Ibaad Contracting Inc</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+/* FILTER */
+const buttons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".project-card");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        items.forEach(item => {
+            if (filter === "all" || item.dataset.category.includes(filter)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});
+
+/* DETAILS TOGGLE */
+function toggleDetails(btn){
+    const details = btn.parentElement.nextElementSibling;
+    details.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
